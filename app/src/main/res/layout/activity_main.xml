@@ -6,13 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_firebase_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:id="@+id/image"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/log_in_mb"
+            android:layout_marginStart="20sp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="See what's happening in the world right now."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="32dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Log in"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_above="@id/views1"
+            android:layout_centerHorizontal="true"
+            app:cornerRadius="10sp"
+            android:textColor="@color/black"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/black"
+            android:id="@+id/log_in_mb"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_above="@+id/register_mb"
+            android:layout_marginBottom="10sp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/views1">
+
+            <View
+                android:layout_width="@dimen/width"
+                android:layout_height="2dp"
+                android:background="@color/view_color"
+                android:layout_toStartOf="@id/or_tv"
+                android:layout_marginEnd="10sp"
+                android:layout_marginTop="11dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/or_tv"/>
+
+            <View
+                android:layout_width="@dimen/width"
+                android:layout_height="2dp"
+                android:background="@color/view_color"
+                android:layout_toEndOf="@id/or_tv"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="10sp"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:text="Create account"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            app:cornerRadius="10sp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/register_mb"/>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

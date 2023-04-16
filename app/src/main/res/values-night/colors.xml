@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="view_color">#CFCFCF</color>
-    <color name="strike_color">#CFCFCF</color>
+    <color name="view_color">#2C2C2C</color>
+    <color name="strike_color">#616161</color>
 
 </resources>
