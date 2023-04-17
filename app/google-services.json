@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769876522358",
+    "project_id": "edmacfirebase",
+    "storage_bucket": "edmacfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769876522358:android:c95de8aa74f642b084b657",
+        "android_client_info": {
+          "package_name": "com.eacunap.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769876522358-nvcdc6tdad3qhjv0neufnrtpkfroga7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgc7cHaXJ7IUCSbjF7cds-jDUUzSvqiyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769876522358-nvcdc6tdad3qhjv0neufnrtpkfroga7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

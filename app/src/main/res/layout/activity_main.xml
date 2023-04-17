@@ -100,6 +100,7 @@
             android:layout_marginEnd="20sp"
             android:text="Create account"
             android:textAllCaps="false"
+            android:backgroundTint="@color/yellow_500"
             android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="100dp"

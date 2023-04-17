@@ -5,5 +5,16 @@
     <!-- UI -->
     <dimen name="width">380dp</dimen>
     <dimen name="height">60dp</dimen>
+    <dimen name="star">20dp</dimen>
+    <dimen name="end">20dp</dimen>
+
+    <!-- Login -->
+    <dimen name="text_sign_up">18sp</dimen>
+    <dimen name="text_sign_up_rl">25sp</dimen>
+    <dimen name="image_Widht_height">40dp</dimen>
+    <dimen name="marginBottom_forgot_password">80dp</dimen>
+    <dimen name="text_login_bottom">50dp</dimen>
+    <dimen name="text_size_info">40dp</dimen>
+
 
 </resources>

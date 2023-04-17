@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         binding.registerMb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
                 finish();
             }
         });
