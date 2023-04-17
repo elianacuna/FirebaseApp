@@ -13,7 +13,7 @@
         <!-- Customize your theme here. -->
 
         <item name="colorPrimaryDark">@color/background_view</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">false</item>
 
     </style>
 

@@ -52,7 +52,7 @@
             app:cornerRadius="10sp"
             android:textColor="@color/black"
             app:strokeWidth="1dp"
-            app:strokeColor="@color/black"
+            app:strokeColor="@color/strike_color"
             android:id="@+id/log_in_mb"/>
 
         <RelativeLayout
