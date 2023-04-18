@@ -35,13 +35,99 @@
             android:layout_height="match_parent">
 
 
+            <!--1: page email -->
+            <RelativeLayout
+                android:id="@+id/email_RL"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relative_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp">
+
+                    <ImageView
+                        android:id="@+id/back_3"
+                        android:layout_width="@dimen/back_register"
+                        android:layout_height="@dimen/back_register"
+                        android:layout_marginStart="20dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_back" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/text_name_top"
+                    android:text="@string/title_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/name_title"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/description_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/description_email"
+                    android:textSize="@dimen/name_description" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/star"
+                    android:layout_marginEnd="@dimen/end"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/email_IL">
+                    <EditText
+                        android:layout_width="@dimen/width"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:id="@+id/email_address_register_et"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/email_register_mb"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="@dimen/height"
+                    android:layout_below="@id/email_IL"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/bottom_top"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="20dp"
+                    app:cornerRadius="10dp"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/yellow_500"
+                    android:textColor="#FFFFFF"
+                    />
+
+            </RelativeLayout>
+
             <!-- 1: page name -->
             <RelativeLayout
                 android:id="@+id/name_RL"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20sp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <RelativeLayout
                     android:id="@+id/relative_1"
@@ -235,92 +321,6 @@
                     android:textAllCaps="false"
                     />
 
-
-            </RelativeLayout>
-
-            <!--3: page email -->
-            <RelativeLayout
-                android:id="@+id/email_RL"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:id="@+id/relative_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20sp">
-
-                    <ImageView
-                        android:id="@+id/back_3"
-                        android:layout_width="@dimen/back_register"
-                        android:layout_height="@dimen/back_register"
-                        android:layout_marginStart="20dp"
-                        android:background="?android:selectableItemBackgroundBorderless"
-                        android:src="@drawable/ic_back" />
-
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/title_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/relative_3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/text_name_top"
-                    android:text="@string/title_email"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/name_title"
-                    android:textStyle="bold"
-                    />
-
-                <TextView
-                    android:id="@+id/description_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/title_3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="@string/description_email"
-                    android:textSize="@dimen/name_description" />
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="@dimen/width"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/description_3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="@dimen/star"
-                    android:layout_marginEnd="@dimen/end"
-                    android:layout_marginTop="30dp"
-                    android:id="@+id/email_IL">
-                    <EditText
-                        android:layout_width="@dimen/width"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/email_address"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:id="@+id/email_address_register_et"
-                        />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/email_register_mb"
-                    android:layout_width="@dimen/width"
-                    android:layout_height="@dimen/height"
-                    android:layout_below="@id/email_IL"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="@dimen/bottom_top"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginEnd="20dp"
-                    app:cornerRadius="10dp"
-                    android:text="@string/next"
-                    android:textAllCaps="false"
-                    android:backgroundTint="@color/yellow_500"
-                    android:textColor="#FFFFFF"
-                    />
 
             </RelativeLayout>
 
