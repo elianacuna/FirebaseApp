@@ -8,8 +8,16 @@
     <color name="black">#FFFFFFFF</color>
     <color name="white">#FF000000</color>
 
+    <!-- UI Design -->
     <color name="background_view">#121212</color>
     <color name="view_color">#353535</color>
     <color name="strike_color">#616161</color>
+    <color name="error">#EF3D3D</color>
+
+    <!-- Color Chip -->
+    <color name="color_chip">#D2F6EE</color>
+    <color name="color_text_chip">#5FB89E</color>
+    <color name="error_chip_color">#2C2C2C</color>
+    <color name="error_chip_text_color">#9A9BA2</color>
 
 </resources>

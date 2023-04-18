@@ -3,17 +3,31 @@
     <!-- -->
 
     <!-- UI -->
-    <dimen name="width">380dp</dimen>
-    <dimen name="height">60dp</dimen>
+    <dimen name="width">550dp</dimen>
+    <dimen name="height">70dp</dimen>
     <dimen name="star">20dp</dimen>
     <dimen name="end">20dp</dimen>
 
     <!-- Login -->
     <dimen name="text_sign_up">25sp</dimen>
     <dimen name="text_sign_up_rl">30sp</dimen>
-    <dimen name="image_Widht_height">60dp</dimen>
-    <dimen name="marginBottom_forgot_password">150dp</dimen>
-    <dimen name="text_login_bottom">100dp</dimen>
+    <dimen name="image_Width_height">80dp</dimen>
+    <dimen name="marginBottom_forgot_password">70dp</dimen>
+    <dimen name="text_login_bottom">40dp</dimen>
     <dimen name="text_size_info">40dp</dimen>
+
+    <!-- Register-->
+    <dimen name="back_register">35dp</dimen>
+    <dimen name="image_register">400dp</dimen>
+    <dimen name="image_top">20dp</dimen>
+    <dimen name="text_bottom">60dp</dimen>
+    <dimen name="bottom_top">60dp</dimen>
+    <dimen name="text_size_title">30dp</dimen>
+    <dimen name="text_size_description">17dp</dimen>
+    <dimen name="text_name_top">130dp</dimen>
+    <dimen name="name_title">35dp</dimen>
+    <dimen name="name_description">22sp</dimen>
+    <dimen name="widht_edit">325dp</dimen>
+    <dimen name="text_birthday">25dp</dimen>
 
 </resources>

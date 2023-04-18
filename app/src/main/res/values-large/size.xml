@@ -11,10 +11,24 @@
     <!-- Login -->
     <dimen name="text_sign_up">18sp</dimen>
     <dimen name="text_sign_up_rl">25sp</dimen>
-    <dimen name="image_Widht_height">40dp</dimen>
+    <dimen name="image_Widht_height">55dp</dimen>
     <dimen name="marginBottom_forgot_password">80dp</dimen>
     <dimen name="text_login_bottom">50dp</dimen>
     <dimen name="text_size_info">40dp</dimen>
+
+    <!-- Register-->
+    <dimen name="back_register">30dp</dimen>
+    <dimen name="image_register">350dp</dimen>
+    <dimen name="image_top">40dp</dimen>
+    <dimen name="text_bottom">55dp</dimen>
+    <dimen name="bottom_top">60dp</dimen>
+    <dimen name="text_size_title">28dp</dimen>
+    <dimen name="text_size_description">18dp</dimen>
+    <dimen name="text_name_top">80dp</dimen>
+    <dimen name="name_title">28dp</dimen>
+    <dimen name="name_description">18dp</dimen>
+    <dimen name="widht_edit">190dp</dimen>
+    <dimen name="text_birthday">19dp</dimen>
 
 
 </resources>

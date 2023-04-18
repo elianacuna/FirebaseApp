@@ -10,18 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_firebase_logo"
-            android:layout_centerHorizontal="true"
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative1"
             android:layout_marginTop="20sp"
-            android:id="@+id/image"/>
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="@dimen/image_Widht_height"
+                android:layout_height="@dimen/image_Widht_height"
+                android:src="@drawable/ic_firebase_logo"
+                android:id="@+id/image"/>
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/image"
+            android:layout_below="@id/relative1"
             android:layout_centerHorizontal="true"
             android:layout_above="@id/log_in_mb"
             android:layout_marginStart="20sp">
@@ -29,7 +36,7 @@
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="See what's happening in the world right now."
+                android:text="@string/title_main"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="32dp"
@@ -44,7 +51,7 @@
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
             android:layout_marginBottom="10sp"
-            android:text="Log in"
+            android:text="@string/log_in"
             android:textAllCaps="false"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_above="@id/views1"
@@ -76,7 +83,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OR"
+                android:text="@string/or"
+                android:textAllCaps="true"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textColor="@color/black"
@@ -98,7 +106,7 @@
             android:layout_height="@dimen/height"
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
-            android:text="Create account"
+            android:text="@string/create_account"
             android:textAllCaps="false"
             android:backgroundTint="@color/yellow_500"
             android:textColor="#FFFFFF"
@@ -107,6 +115,7 @@
             app:cornerRadius="10sp"
             android:layout_alignParentBottom="true"
             android:id="@+id/register_mb"/>
+
 
     </RelativeLayout>
 

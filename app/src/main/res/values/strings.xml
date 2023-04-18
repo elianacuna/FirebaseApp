@@ -1,3 +1,64 @@
 <resources>
+    <!--Name of the app -->
     <string name="app_name">FirebaseApp</string>
+
+    <!--Main -->
+    <string name="title_main">See what\'s happening in the world right now.</string>
+    <string name="log_in">Log in</string>
+    <string name="create_account">Create account</string>
+    <string name="or">OR</string>
+
+    <!-- Log in -->
+    <string name="title_login">Log in with your\nFirebase ID</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+
+    <!-- Register -->
+    <string name="title_register">Create your account</string>
+    <string name="name">Name</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+
+    <!-- Register -->
+    <string name="text_title_1" translatable="false">Join Quiker</string>
+    <string name="text_description_1" translatable="false">Create an account to connect with friends, family or to make new friends and share your interests</string>
+    <string name="already_have_an_account" translatable="false">Already have an account?</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    //name
+    <string name="what_s_your_name" translatable="false">What\'s your name?</string>
+    <string name="enter_your_real_name" translatable="false">Enter your real name.</string>
+    <string name="first_name" translatable="false">First name</string>
+    <string name="last_name" translatable="false">Last name</string>
+    //Birthday
+    <string name="birthday" translatable="false">Birthday</string>
+    <string name="what_s_your_birthday" translatable="false">What\'s your birthday?</string>
+    <string name="choose_your_date_of_birth" translatable="false">Choose your date of birth.</string>
+    <string name="years_old" translatable="false"> Years old</string>
+    <string name="year_old" translatable="false"> Year old</string>
+    //Email
+    <string name="email_address" translatable="false">Email address</string>
+    <string name="title_email" translatable="false">Enter your email address</string>
+    <string name="description_email" translatable="false">Enter the email where you can be reached. You can \nhide this from your profile later.</string>
+
+    //Password
+    <string name="chip_1" translatable="false">At least 6 characters</string>
+    <string name="chip_2" translatable="false">Minimum 1  number</string>
+    <string name="chip_3" translatable="false">Minimum 1 uppercase</string>
+    <string name="chip_4" translatable="false">Minimum 1 symbol</string>
+    <string name="chip_5" translatable="false">Minimum 1 lowercase letter</string>
+    <string name="tittle_password" translatable="false">Choose a password</string>
+    <string name="description_password" translatable="false">Create a password with at least 6 characters. It \nshould be a difficult password to guess.</string>
+    //terms and services
+    <string name="terms_and_privacy" translatable="false">Terms and Privacy</string>
+    <string name="finish_signing_up" translatable="false">Finish signing up</string>
+    <string name="i_agree_with_the_terms_and_conditions" translatable="false">I agree with the Terms and Conditions.</string>
+    <string name="i_agree_with_the_privacy_policy" translatable="false">I agree with the Privacy Policy.</string>
+    <string name="info_terms_and_privacy" translatable="false">People who use our service may have uploaded\n their information to Quiker. By tapping Sign Up, \nyou agree to our <b>Terms</b>, <b>Data Policy</b> and <b>\nCookies Policy.</b></string>
+
+    //Creating account
+    <string name="tittle_creating" translatable="false">Creating your account...</string>
+    <string name="creating_account" translatable="false">Creating account</string>
+
 </resources>
