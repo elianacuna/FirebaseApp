@@ -7,6 +7,7 @@
     tools:context=".activities.LoginActivity">
 
     <RelativeLayout
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -34,63 +35,71 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/email_login_il"
+                android:layout_above="@+id/text2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/text_login_bottom"
                 android:gravity="center"
                 android:text="@string/title_login"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_size_info"
+                android:textSize="@dimen/text_title_login"
                 android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email_login_il"
+            <TextView
                 android:layout_width="@dimen/width"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/password_login_il"
+                android:layout_above="@+id/email_il"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/text_login_bottom"
                 android:layout_marginStart="@dimen/star"
                 android:layout_marginEnd="@dimen/end"
-                android:layout_marginBottom="10dp">
+                android:gravity="center"
+                android:text="We are happy to see you again. Sign in with your Firebase ID"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text"
+                android:id="@+id/text2"/>
 
-                <EditText
-                    android:id="@+id/email_login_il_et"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_il"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/password_il"
+                app:boxStrokeWidth="@dimen/stroke"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_et"
                     android:layout_width="@dimen/width"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password_login_il"
+                android:id="@+id/password_il"
                 android:layout_width="@dimen/width"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/scannerRl"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="@dimen/star"
-                android:layout_marginEnd="@dimen/end"
-                android:layout_marginBottom="10dp">
-
-                <EditText
-                    android:id="@+id/password_login_et"
+                android:layout_above="@+id/scannerRl"
+                app:boxStrokeWidth="@dimen/stroke"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_et"
                     android:layout_width="@dimen/width"
                     android:layout_height="wrap_content"
-                    android:autofillHints="password"
-                    android:background="@android:color/transparent"
                     android:hint="@string/password"
-                    android:inputType="textPassword"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
                 android:id="@+id/scannerRl"
                 android:layout_width="@dimen/width"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/log_in_mb"
+                android:layout_above="@+id/login_mb"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="15sp"
                 android:layout_marginStart="@dimen/star"
                 android:layout_marginEnd="@dimen/end">
 
@@ -99,13 +108,13 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginBottom="100dp"
+                    android:layout_marginBottom="80dp"
                     android:src="@drawable/ic_qr_scanner" />
 
             </RelativeLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/log_in_mb"
+                android:id="@+id/login_mb"
                 android:layout_width="@dimen/width"
                 android:layout_height="@dimen/height"
                 android:layout_above="@+id/forgot_password_mb"
@@ -130,43 +139,16 @@
                 android:layout_marginBottom="@dimen/marginBottom_forgot_password"
                 android:text="@string/forgot_password"
                 android:textAllCaps="false"
-                android:textSize="@dimen/text_sign_up" />
+                android:textSize="@dimen/text" />
 
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_above="@id/go_to_register_rl"
+                android:layout_alignParentBottom="true"
                 android:layout_marginBottom="15sp"
                 android:background="@color/view_color" />
 
-            <RelativeLayout
-                android:id="@+id/go_to_register_rl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/text_sign_up_rl">
-
-                <TextView
-                    android:id="@+id/text_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_toEndOf="@id/text_2"
-                    android:text="Sign Up"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_sign_up"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/text_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Don't have an account?"
-                    android:textSize="@dimen/text_sign_up" />
-
-            </RelativeLayout>
 
 
         </RelativeLayout>

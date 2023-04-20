@@ -7,26 +7,14 @@
     <dimen name="height">60dp</dimen>
     <dimen name="star">20dp</dimen>
     <dimen name="end">20dp</dimen>
+    <dimen name="text">14sp</dimen>
+    <dimen name="stroke">1dp</dimen>
+
     <!-- Login -->
-    <dimen name="text_sign_up">14sp</dimen>
-    <dimen name="text_sign_up_rl">55dp</dimen>
     <dimen name="image_Widht_height">45dp</dimen>
     <dimen name="marginBottom_forgot_password">45dp</dimen>
-    <dimen name="text_login_bottom">30dp</dimen>
-    <dimen name="text_size_info">20sp</dimen>
+    <dimen name="text_login_bottom">60dp</dimen>
+    <dimen name="text_title_login">30dp</dimen>
 
-    <!-- Register-->
-    <dimen name="back_register">25dp</dimen>
-    <dimen name="image_register">300dp</dimen>
-    <dimen name="image_top">60dp</dimen>
-    <dimen name="text_bottom">55dp</dimen>
-    <dimen name="bottom_top">60dp</dimen>
-    <dimen name="text_size_title">22dp</dimen>
-    <dimen name="text_size_description">14dp</dimen>
-    <dimen name="text_name_top">70dp</dimen>
-    <dimen name="name_title">14sp</dimen>
-    <dimen name="name_description">14dp</dimen>
-    <dimen name="widht_edit">155dp</dimen>
-    <dimen name="text_birthday">16dp</dimen>
 
 </resources>
