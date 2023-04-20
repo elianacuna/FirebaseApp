@@ -16,6 +16,10 @@
     <dimen name="text_login_bottom">100dp</dimen>
     <dimen name="text_title_login">55dp</dimen>
 
-
+    <!-- Register -->
+    <dimen name="title">38dp</dimen>
+    <dimen name="description">25sp</dimen>
+    <dimen name="top_register">70dp</dimen>
+    <dimen name="text_birthday">25dp</dimen>
 
 </resources>

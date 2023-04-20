@@ -20,11 +20,11 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //handle RegisterRL click, star register screen
-        binding.goToRegisterRl.setOnClickListener(new View.OnClickListener() {
+        //handle backIV click, back Main screen
+        binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
             }
         });

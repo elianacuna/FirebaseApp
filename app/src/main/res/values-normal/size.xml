@@ -4,7 +4,7 @@
 
     <!-- UI -->
     <dimen name="width">380dp</dimen>
-    <dimen name="height">60dp</dimen>
+    <dimen name="height">65dp</dimen>
     <dimen name="star">20dp</dimen>
     <dimen name="end">20dp</dimen>
     <dimen name="text">14sp</dimen>
@@ -16,5 +16,10 @@
     <dimen name="text_login_bottom">60dp</dimen>
     <dimen name="text_title_login">30dp</dimen>
 
+    <!-- Register -->
+    <dimen name="title">28dp</dimen>
+    <dimen name="description">14dp</dimen>
+    <dimen name="top_register">40dp</dimen>
+    <dimen name="text_birthday">16dp</dimen>
 
 </resources>

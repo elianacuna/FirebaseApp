@@ -11,6 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20sp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="20sp"
+            android:id="@+id/back"/>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
@@ -22,6 +31,7 @@
                 android:id="@+id/image"
                 android:layout_width="@dimen/image_Widht_height"
                 android:layout_height="@dimen/image_Widht_height"
+                android:layout_centerHorizontal="true"
                 android:src="@drawable/ic_firebase_logo" />
 
         </RelativeLayout>
@@ -52,7 +62,7 @@
                 android:layout_marginStart="@dimen/star"
                 android:layout_marginEnd="@dimen/end"
                 android:gravity="center"
-                android:text="We are happy to see you again. Sign in with your Firebase ID"
+                android:text="@string/description_login"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text"
                 android:id="@+id/text2"/>
@@ -63,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/password_il"
+                app:startIconDrawable="@drawable/ic_at_sign"
                 app:boxStrokeWidth="@dimen/stroke"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
@@ -82,6 +93,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/scannerRl"
                 app:boxStrokeWidth="@dimen/stroke"
+                app:startIconDrawable="@drawable/ic_lock"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
                 <com.google.android.material.textfield.TextInputEditText

@@ -7,13 +7,40 @@
     <string name="log_in">Log in</string>
     <string name="create_account">Create account</string>
     <string name="or">OR</string>
+    <string name="cancel">Cancel</string>
+
 
     <!-- Log in -->
     <string name="title_login">Welcome</string>
     <string name="email">Email address</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="description_login">We are happy to see you again. Sign in with your Firebase ID</string>
 
+    <!-- Register -->
+    <string name="next">Next</string>
+    <string name="title_1">What\'s your email?</string>
+    <string name="description_1">Enter the email where you can be contacted. No one will be able to see this.</string>
+    <string name="name">Name</string>
+    <string name="title_2">What\'s your name</string>
+    <string name="description_2">Enter your real name.</string>
+    <string name="chip_1" translatable="false">At least 6 characters</string>
+    <string name="chip_2" translatable="false">Minimum 1  number</string>
+    <string name="chip_3" translatable="false">Minimum 1 uppercase</string>
+    <string name="chip_4" translatable="false">Minimum 1 symbol</string>
+    <string name="chip_5" translatable="false">Minimum 1 lowercase letter</string>
+    <string name="i_agree_with_the_terms_and_conditions" translatable="false">I agree with the Terms and Conditions.</string>
+    <string name="i_agree_with_the_privacy_policy" translatable="false">I agree with the Privacy Policy.</string>
+    <string name="title_3">What\'s your birthday</string>
+    <string name="description_3">your date of birth will not be shown publicly.</string>
+    <string name="title_4">Create a password</string>
+    <string name="description_4">Your password must have at least: 8 characters (20 max), 1 capital letter, 1 number and a special character (such as: # ? ! $ % @)</string>
+    <string name="title_5">Agree to Firebase\'s terms and policies</string>
+    <string name="sign_up">Sign up</string>
+
+    <!-- Terms and Policies -->
+    <string name="info_terms_and_policies">By tapping <b>I agree</b>, you agree to create an account and to Firebase\'s <b>Terms</b>, <b>Privacy Policy</b> and <b>Cookies Policy</b>.
+    \nThe <b>Privacy Policy</b> describes the ways we can use the information we collect when you create an account. For example, we use this information to provide, personalize and improve our products, including ads.</string>
 
 
 </resources>

@@ -10,61 +10,481 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relative1"
-            android:layout_marginTop="10sp"
-            android:layout_centerHorizontal="true">
-
-
+            android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="@dimen/image_Widht_height"
-                android:layout_height="@dimen/image_Widht_height"
-                android:src="@drawable/ic_firebase_logo"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/image"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="20sp"
+                android:id="@+id/back"/>
+
+
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/email_rl">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="20sp"
+                android:id="@+id/back_1"/>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_1"
+                android:textSize="@dimen/title"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_below="@id/back_1"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/top_register"
+                android:id="@+id/title1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/description_1"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:textSize="@dimen/description"
+                android:id="@+id/description1"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_il"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/description1"
+                android:layout_marginTop="@dimen/top_register"
+                app:boxStrokeWidth="@dimen/stroke"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_et"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/email_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_below="@+id/email_il"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginTop="@dimen/top_register"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="@dimen/width"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15sp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="15sp"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="gone"
-            android:layout_marginBottom="25dp">
+            android:id="@+id/name_rl">
 
-            <com.google.android.material.button.MaterialButton
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="20sp"
+                android:id="@+id/back_2"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nexg"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_title_login"
-                android:enabled="false"
-                app:cornerRadius="100dp"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/next_mb"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cancel"
-                android:textAllCaps="false"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="@string/title_2"
+                android:textSize="@dimen/title"
+                android:layout_below="@id/back_2"
+                android:layout_centerHorizontal="true"
                 android:textColor="@color/black"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/strike_color"
-                app:cornerRadius="100dp"
-                android:id="@+id/cancel_mb"/>
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/top_register"
+                android:id="@+id/title2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/description_2"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:textSize="@dimen/description"
+                android:id="@+id/description2"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_il"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/description2"
+                android:layout_marginTop="@dimen/top_register"
+                app:boxStrokeWidth="@dimen/stroke"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_et"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/name_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_below="@+id/name_il"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginTop="@dimen/top_register"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/birthday_rl">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="20sp"
+                android:id="@+id/back_3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_3"
+                android:textSize="@dimen/title"
+                android:layout_below="@id/back_3"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/top_register"
+                android:id="@+id/title3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/description_3"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:textSize="@dimen/description"
+                android:id="@+id/description3"/>
+
+            <DatePicker
+                android:id="@+id/age_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/top_register"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+            <TextView
+                android:id="@+id/age_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age_dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_birthday"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/birthday_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_below="@+id/age_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginTop="@dimen/top_register"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/password_rl">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="20sp"
+                android:id="@+id/back_4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_4"
+                android:textSize="@dimen/title"
+                android:layout_below="@id/back_4"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/top_register"
+                android:id="@+id/title4"/>
+
+            <TextView
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/description_4"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:textSize="@dimen/description"
+                android:id="@+id/description4"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_il"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/description4"
+                android:layout_marginTop="30dp"
+                app:boxStrokeWidth="@dimen/stroke"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_et"
+                    android:layout_width="@dimen/width"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="380dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_il"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_1"
+                    android:layout_marginStart="20dp"
+                    android:clickable="false"
+                    android:textColor="@color/error_chip_text_color"
+                    android:id="@+id/chip_1"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_2"
+                    android:clickable="false"
+                    android:textColor="@color/error_chip_text_color"
+                    android:id="@+id/chip_2"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:clickable="false"
+                    android:textColor="@color/error_chip_text_color"
+                    android:text="@string/chip_3"
+                    android:id="@+id/chip_3"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_4"
+                    android:clickable="false"
+                    android:textColor="@color/error_chip_text_color"
+                    app:checkedIconEnabled="true"
+                    android:id="@+id/chip_4"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    app:closeIconEnabled="false"
+                    android:clickable="false"
+                    android:text="@string/chip_5"
+                    android:textColor="@color/error_chip_text_color"
+                    android:id="@+id/chip_5"/>
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/password_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_below="@+id/chipGroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginTop="@dimen/top_register"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/privacy_rl">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20sp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="20sp"
+                android:id="@+id/back_5"/>
+
+            <TextView
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="@string/title_5"
+                android:textSize="@dimen/title"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_below="@id/back_5"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/top_register"
+                android:id="@+id/title5"/>
+
+            <TextView
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/top_register"
+                android:text="@string/info_terms_and_policies"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:textStyle="italic"
+                android:textSize="@dimen/description"
+                android:id="@+id/description5"/>
+
+            <RelativeLayout
+                android:id="@+id/check_box_RL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp">
+
+                <CheckBox
+                    android:id="@+id/agree_terms_CB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black" />
+
+                <TextView
+                    android:id="@+id/text_1_CB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="20sp"
+                    android:text="@string/i_agree_with_the_terms_and_conditions"
+                    android:layout_toEndOf="@+id/agree_privacy_CB"
+                    />
+
+                <CheckBox
+                    android:id="@+id/agree_privacy_CB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:buttonTint="@color/black" />
+
+                <TextView
+                    android:id="@+id/text_2_CB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_agree_with_the_privacy_policy"
+                    android:layout_below="@id/agree_terms_CB"
+                    android:layout_toEndOf="@+id/agree_privacy_CB"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_up_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_below="@+id/check_box_RL"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginTop="@dimen/top_register"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
 
         </RelativeLayout>
 
