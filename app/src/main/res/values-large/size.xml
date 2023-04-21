@@ -9,6 +9,7 @@
     <dimen name="end">20dp</dimen>
     <dimen name="text">18sp</dimen>
     <dimen name="stroke">2dp</dimen>
+    <dimen name="backIv">25dp</dimen>
 
     <!-- Login -->
     <dimen name="image_Widht_height">55dp</dimen>
@@ -21,5 +22,8 @@
     <dimen name="description">18dp</dimen>
     <dimen name="top_register">40dp</dimen>
     <dimen name="text_birthday">19dp</dimen>
+    <dimen name="progress_bar">80dp</dimen>
+
+
 
 </resources>

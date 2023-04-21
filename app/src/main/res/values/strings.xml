@@ -2,28 +2,54 @@
     <!--Name of the app -->
     <string name="app_name">FirebaseApp</string>
 
+    <!-- Message email -->
+
+    <string name="message_email_1">Hi:</string>
+    <string name="message_email_2">
+
+A sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.</string>
+    <string name="message_email_3">
+
+Verification code:</string>
+    <string name="message_email_4">
+
+If you did not attempt to sign in to your account, your password may be compromised. Create a new, strong password your Firebase account.</string>
+    <string name="message_email_5">
+
+If you\'d like to automatically verify devices in the future, consider enabling two-factor authentication on your account.</string>
+    <string name="message_email_6">
+
+If you decide to enable two-factor authentication, ensure you retain access to one or more account recovery methods.</string>
+    <string name="message_email_7">
+
+Thanks,
+ The Edmac Team</string>
+
     <!--Main -->
-    <string name="title_main">See what\'s happening in the world right now.</string>
-    <string name="log_in">Log in</string>
-    <string name="create_account">Create account</string>
-    <string name="or">OR</string>
-    <string name="cancel">Cancel</string>
+    <string name="title_main" translatable="false">See what\'s happening in the world right now.</string>
+    <string name="log_in" translatable="false">Log in</string>
+    <string name="create_account" translatable="false">Create account</string>
+    <string name="or" translatable="false">OR</string>
+    <string name="cancel" translatable="false">Cancel</string>
 
 
     <!-- Log in -->
-    <string name="title_login">Welcome</string>
-    <string name="email">Email address</string>
-    <string name="password">Password</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="description_login">We are happy to see you again. Sign in with your Firebase ID</string>
+    <string name="title_login" translatable="false">Welcome</string>
+    <string name="email" translatable="false">Email address</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="forgot_password" translatable="false">Forgot password?</string>
+    <string name="description_login" translatable="false">We are happy to see you again. Sign in with your Firebase ID</string>
+
 
     <!-- Register -->
-    <string name="next">Next</string>
-    <string name="title_1">What\'s your email?</string>
-    <string name="description_1">Enter the email where you can be contacted. No one will be able to see this.</string>
-    <string name="name">Name</string>
-    <string name="title_2">What\'s your name</string>
-    <string name="description_2">Enter your real name.</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="description" translatable="false">Create an account to connect with friends, family and communities of people who share your interest.</string>
+    <string name="title" translatable="false">Join Firebase</string>
+    <string name="title_1" translatable="false">What\'s your email?</string>
+    <string name="description_1" translatable="false">Enter the email where you can be contacted. No one will be able to see this.</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="title_2" translatable="false">What\'s your name</string>
+    <string name="description_2" translatable="false">Enter your real name.</string>
     <string name="chip_1" translatable="false">At least 6 characters</string>
     <string name="chip_2" translatable="false">Minimum 1  number</string>
     <string name="chip_3" translatable="false">Minimum 1 uppercase</string>
@@ -31,16 +57,28 @@
     <string name="chip_5" translatable="false">Minimum 1 lowercase letter</string>
     <string name="i_agree_with_the_terms_and_conditions" translatable="false">I agree with the Terms and Conditions.</string>
     <string name="i_agree_with_the_privacy_policy" translatable="false">I agree with the Privacy Policy.</string>
-    <string name="title_3">What\'s your birthday</string>
-    <string name="description_3">your date of birth will not be shown publicly.</string>
-    <string name="title_4">Create a password</string>
-    <string name="description_4">Your password must have at least: 8 characters (20 max), 1 capital letter, 1 number and a special character (such as: # ? ! $ % @)</string>
-    <string name="title_5">Agree to Firebase\'s terms and policies</string>
-    <string name="sign_up">Sign up</string>
+    <string name="title_3" translatable="false">What\'s your birthday</string>
+    <string name="description_3" translatable="false">your date of birth will not be shown publicly.</string>
+    <string name="title_4" translatable="false">Create a password</string>
+    <string name="description_4" translatable="false">Your password must have at least: 8 characters (20 max), 1 capital letter, 1 number and a special character (such as: # ? ! $ % @).</string>
+    <string name="title_5" translatable="false">Agree to Firebase\'s terms and policies</string>
+    <string name="sign_up" translatable="false">Sign up</string>
+    <string name="get_started" translatable="false">Get started</string>
+    <string name="description_6" translatable="false">Creating your account...</string>
+    //RegisterActivity
+    <string name="error_email">Please enter a valid email address.</string>
+    <string name="error_name">Please enter your name.</string>
+    <string name="error_age" translatable="false">You seem to be entering the wrong information. Please enter your true date of birth.</string>
+    <string name="years_old" translatable="false"> Years old</string>
+    <string name="year_old" translatable="false"> Year old</string>
+    <string name="choose_your_date_of_birth">Choose your date of birth.</string>
+   <string name="send_email" translatable="false">The code was sent</string>
 
     <!-- Terms and Policies -->
-    <string name="info_terms_and_policies">By tapping <b>I agree</b>, you agree to create an account and to Firebase\'s <b>Terms</b>, <b>Privacy Policy</b> and <b>Cookies Policy</b>.
+    <string name="info_terms_and_policies" translatable="false">By tapping <b>I agree</b>, you agree to create an account and to Firebase\'s <b>Terms</b>, <b>Privacy Policy</b> and <b>Cookies Policy</b>.
     \nThe <b>Privacy Policy</b> describes the ways we can use the information we collect when you create an account. For example, we use this information to provide, personalize and improve our products, including ads.</string>
+
+    <!-- Confirm the email -->
 
 
 </resources>

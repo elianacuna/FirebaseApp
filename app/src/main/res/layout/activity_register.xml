@@ -10,9 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Page principal -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/principal_rl"
+            android:visibility="visible">
 
             <ImageView
                 android:layout_width="25dp"
@@ -23,10 +26,64 @@
                 android:layout_marginStart="20sp"
                 android:id="@+id/back"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="@dimen/title"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_below="@id/back"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/top_register"
+                android:id="@+id/title"/>
+
+            <RelativeLayout
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:background="#FFE3CA"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/title"
+                android:id="@+id/relative">
+
+                <ImageView
+                    android:layout_width="@dimen/width"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ic_firebase_logo"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/description"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:textSize="@dimen/description"
+                android:id="@+id/description"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_below="@+id/description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginTop="@dimen/top_register"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/get_started"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
 
 
         </RelativeLayout>
 
+        <!-- Page Email -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -103,6 +160,7 @@
 
         </RelativeLayout>
 
+        <!-- Page Name -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -178,6 +236,7 @@
 
         </RelativeLayout>
 
+        <!-- Page Birthday -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -255,6 +314,7 @@
 
         </RelativeLayout>
 
+        <!-- Page Password -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -388,6 +448,7 @@
 
         </RelativeLayout>
 
+        <!-- Page Terms and Policies -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -488,6 +549,44 @@
 
         </RelativeLayout>
 
+        <!-- Page Creating account -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/creating_rl">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="@dimen/progress_bar"
+                android:layout_height="@dimen/progress_bar"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/yellow_700"
+                android:indeterminateTintMode="src_in"
+                />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/image_Widht_height"
+                android:layout_height="@dimen/image_Widht_height"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_firebase_logo" />
+
+            <TextView
+                android:id="@+id/title_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10sp"
+                android:text="@string/description_6"
+                android:textSize="@dimen/description"
+                android:textColor="@color/yellow_700"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
