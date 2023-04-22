@@ -20,4 +20,7 @@
     <color name="error_chip_color">#2C2C2C</color>
     <color name="error_chip_text_color">#9A9BA2</color>
 
+    //Color bottom sheet and dialog
+    <color name="color_sheet_dialog">#1C1C1C</color>
+
 </resources>

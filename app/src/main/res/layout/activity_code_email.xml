@@ -10,6 +10,90 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20sp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="20sp"
+            android:id="@+id/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the confirmation code"
+            android:textSize="@dimen/title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_below="@id/back"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/top_register"
+            android:id="@+id/title"/>
+
+        <TextView
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginEnd="@dimen/end"
+            android:text="To confirm your account, enter the 6-digit code we sent to josepanama2@gmail.com."
+            android:textSize="@dimen/description"
+            android:id="@+id/description"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/code_il"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/description"
+            android:layout_marginTop="@dimen/top_register"
+            app:boxStrokeWidth="@dimen/stroke"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/code_et"
+                android:layout_width="@dimen/width"
+                android:layout_height="wrap_content"
+                android:text="Verification code"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/code_mb"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_below="@+id/code_il"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="@dimen/end"
+            android:backgroundTint="@color/yellow_500"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="I did not receive the code"
+            android:textAllCaps="false"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_below="@id/code_mb"
+            android:layout_marginTop="20sp"
+            android:layout_centerHorizontal="true"
+            app:cornerRadius="10sp"
+            android:textColor="@color/black"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/strike_color"
+            android:id="@+id/log_in_mb"/>
 
 
     </RelativeLayout>

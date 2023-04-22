@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_sheet_dialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="6dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/view_color"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="11dp"
+            android:id="@+id/view"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="330dp"
+            android:layout_height="365dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="@dimen/top_register"
+            android:elevation="100dp"
+            app:strokeColor="#DDDADA"
+            android:backgroundTint="#FCFEFF"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="365dp">
+
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

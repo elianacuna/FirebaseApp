@@ -41,15 +41,14 @@
             <RelativeLayout
                 android:layout_width="@dimen/width"
                 android:layout_height="wrap_content"
-                android:background="#FFE3CA"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/title"
                 android:id="@+id/relative">
 
                 <ImageView
                     android:layout_width="@dimen/width"
-                    android:layout_height="200dp"
-                    android:src="@drawable/ic_firebase_logo"/>
+                    android:layout_height="250dp"
+                    android:src="@drawable/ic_register"/>
 
             </RelativeLayout>
 
@@ -542,7 +541,7 @@
                 android:layout_marginEnd="@dimen/end"
                 android:layout_marginTop="@dimen/top_register"
                 android:backgroundTint="@color/yellow_500"
-                android:text="@string/sign_up"
+                android:text="@string/i_agree"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 app:cornerRadius="8dp" />

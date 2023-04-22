@@ -310,7 +310,6 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-
     private void createAccount() {
         binding.creatingRl.setVisibility(View.VISIBLE);
         binding.privacyRl.setVisibility(View.GONE);
@@ -359,7 +358,7 @@ public class RegisterActivity extends AppCompatActivity {
                 hashMap_IA.put("confirm_email", "no_confirmed");
 
                 DatabaseReference  IAReference = FirebaseDatabase.getInstance().getReference("IAUser");
-                IAReference.child(firebaseAuth.getUid()).setValue(hashMap_IA)
+                IAReference.child(firebaseAuth.getUid()).updateChildren(hashMap_IA)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
@@ -447,7 +446,7 @@ public class RegisterActivity extends AppCompatActivity {
         hashMap.put("email", email);
 
         DatabaseReference  IAReference = FirebaseDatabase.getInstance().getReference("IAUser");
-        IAReference.child(firebaseAuth.getUid()).updateChildren(hashMap)
+        IAReference.child(firebaseAuth.getUid()).setValue(hashMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {

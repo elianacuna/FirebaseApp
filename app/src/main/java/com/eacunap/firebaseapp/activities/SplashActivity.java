@@ -22,9 +22,10 @@ public class SplashActivity extends AppCompatActivity {
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //carga la animacion desde el archivo XML
+        //load the animation from the XML file
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.splash_anim);
-        //añade la animacion al ImageView y TextView, comienza la animacion
+
+        //add animation to ImageView and TextView, start animation
         binding.image.startAnimation(anim);
         binding.text.startAnimation(anim);
 

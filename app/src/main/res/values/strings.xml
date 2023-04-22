@@ -65,6 +65,7 @@ Thanks,
     <string name="sign_up" translatable="false">Sign up</string>
     <string name="get_started" translatable="false">Get started</string>
     <string name="description_6" translatable="false">Creating your account...</string>
+    <string name="i_agree" translatable="false">I agree</string>
     //RegisterActivity
     <string name="error_email">Please enter a valid email address.</string>
     <string name="error_name">Please enter your name.</string>
@@ -76,7 +77,7 @@ Thanks,
 
     <!-- Terms and Policies -->
     <string name="info_terms_and_policies" translatable="false">By tapping <b>I agree</b>, you agree to create an account and to Firebase\'s <b>Terms</b>, <b>Privacy Policy</b> and <b>Cookies Policy</b>.
-    \nThe <b>Privacy Policy</b> describes the ways we can use the information we collect when you create an account. For example, we use this information to provide, personalize and improve our products, including ads.</string>
+    \n\nThe <b>Privacy Policy</b> describes the ways we can use the information we collect when you create an account. For example, we use this information to provide, personalize and improve our products, including ads.</string>
 
     <!-- Confirm the email -->
 
