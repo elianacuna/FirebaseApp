@@ -11,7 +11,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.eacunap.firebaseapp.BottomSheet.CodeBottomSheet;
-import com.eacunap.firebaseapp.R;
 import com.eacunap.firebaseapp.databinding.ActivityMainBinding;
 import com.eacunap.firebaseapp.databinding.ActivitySplashBinding;
 
@@ -32,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onLongClick(View v) {
 
-
+                 codeBottomSheet = CodeBottomSheet.newInstance();
+                codeBottomSheet.show(getSupportFragmentManager(), codeBottomSheet.getTag());
 
                 return false;
             }
