@@ -19,25 +19,12 @@ public class MainActivity extends AppCompatActivity {
     //binding
     private ActivityMainBinding binding;
 
-    CodeBottomSheet codeBottomSheet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        binding.logInMb.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-
-                 codeBottomSheet = CodeBottomSheet.newInstance();
-                codeBottomSheet.show(getSupportFragmentManager(), codeBottomSheet.getTag());
-
-                return false;
-            }
-        });
-
 
         //handle loginBtn click, star login screen
         binding.logInMb.setOnClickListener(new View.OnClickListener() {

@@ -93,7 +93,7 @@
             android:textColor="@color/black"
             app:strokeWidth="1dp"
             app:strokeColor="@color/strike_color"
-            android:id="@+id/log_in_mb"/>
+            android:id="@+id/not_code_mb"/>
 
 
     </RelativeLayout>
