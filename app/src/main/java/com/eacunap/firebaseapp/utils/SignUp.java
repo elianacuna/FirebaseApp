@@ -63,7 +63,7 @@ public class SignUp extends Application {
 
     public static void password_check(String password, ActivityRegisterBinding binding, Context context){
         //at least 6 characters
-        if (password.length() >= 6){
+        if (password.length() >= 8){
             binding.chip1.setTextColor(context.getResources().getColor(R.color.color_text_chip));
             binding.chip1.setChipBackgroundColor(context.getResources().getColorStateList(R.color.color_chip));
         }else {

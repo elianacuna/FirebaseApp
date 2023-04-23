@@ -45,7 +45,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/code_il"
-            android:layout_width="@dimen/width"
+            android:layout_width="@dimen/width_il"
             android:layout_height="@dimen/height"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/description"
@@ -55,7 +55,7 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/code_et"
-                android:layout_width="@dimen/width"
+                android:layout_width="@dimen/width_il"
                 android:layout_height="wrap_content"
                 android:text="Verification code"
                 android:maxLines="1"

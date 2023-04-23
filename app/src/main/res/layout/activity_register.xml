@@ -125,7 +125,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_il"
-                android:layout_width="@dimen/width"
+                android:layout_width="@dimen/width_il"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/description1"
@@ -135,7 +135,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email_et"
-                    android:layout_width="@dimen/width"
+                    android:layout_width="@dimen/width_il"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
                     android:maxLines="1"
@@ -201,7 +201,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name_il"
-                android:layout_width="@dimen/width"
+                android:layout_width="@dimen/width_il"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/description2"
@@ -211,7 +211,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/name_et"
-                    android:layout_width="@dimen/width"
+                    android:layout_width="@dimen/width_il"
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
                     android:maxLines="1"
@@ -355,7 +355,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_il"
-                android:layout_width="@dimen/width"
+                android:layout_width="@dimen/width_il"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/description4"
@@ -365,7 +365,7 @@
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password_et"
-                    android:layout_width="@dimen/width"
+                    android:layout_width="@dimen/width_il"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
                     android:maxLines="1"

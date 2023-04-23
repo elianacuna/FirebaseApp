@@ -23,14 +23,12 @@ public class CodeEmailActivity extends AppCompatActivity {
         binding = ActivityCodeEmailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.notCodeMb.setOnLongClickListener(new View.OnLongClickListener() {
+        binding.notCodeMb.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public void onClick(View v) {
 
                 codeBottomSheet = CodeBottomSheet.newInstance();
                 codeBottomSheet.show(getSupportFragmentManager(), codeBottomSheet.getTag());
-
-                return false;
             }
         });
 

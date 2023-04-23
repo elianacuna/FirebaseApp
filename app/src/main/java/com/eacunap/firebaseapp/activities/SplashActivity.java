@@ -67,7 +67,7 @@ public class SplashActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
                             //get auth confirmed
-                            String userType = ""+snapshot.child("userType").getValue();
+                            String userType = ""+snapshot.child("confirm_auth").getValue();
                             //check auth confirmed
                             if (userType.equals("no_confirmed")){
                                 //open MainActivity
