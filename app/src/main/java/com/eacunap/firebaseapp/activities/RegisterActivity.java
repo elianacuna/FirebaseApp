@@ -355,7 +355,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 //set data to db
                 HashMap<String, Object> hashMap_IA = new HashMap<>();
-                hashMap_IA.put("confirm_email", "no_confirmed");
+                hashMap_IA.put("confirm_auth", "no_confirmed");
 
                 DatabaseReference  IAReference = FirebaseDatabase.getInstance().getReference("IAUser");
                 IAReference.child(firebaseAuth.getUid()).updateChildren(hashMap_IA)
