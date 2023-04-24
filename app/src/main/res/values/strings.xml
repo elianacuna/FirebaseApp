@@ -1,30 +1,4 @@
 <resources>
-    <!--Name of the app -->
-    <string name="app_name">FirebaseApp</string>
-
-    <!-- Message email -->
-
-    <string name="message_email_1">Hi:</string>
-    <string name="message_email_2">
-
-A sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.</string>
-    <string name="message_email_3">
-
-Verification code:</string>
-    <string name="message_email_4">
-
-If you did not attempt to sign in to your account, your password may be compromised. Create a new, strong password your Firebase account.</string>
-    <string name="message_email_5">
-
-If you\'d like to automatically verify devices in the future, consider enabling two-factor authentication on your account.</string>
-    <string name="message_email_6">
-
-If you decide to enable two-factor authentication, ensure you retain access to one or more account recovery methods.</string>
-    <string name="message_email_7">
-
-Thanks,
- The Edmac Team</string>
-
     <!--Main -->
     <string name="title_main" translatable="false">See what\'s happening in the world right now.</string>
     <string name="log_in" translatable="false">Log in</string>
