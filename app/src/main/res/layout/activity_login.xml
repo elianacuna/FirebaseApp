@@ -73,7 +73,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/password_il"
-                app:startIconDrawable="@drawable/ic_at_sign"
                 app:boxStrokeWidth="@dimen/stroke"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
@@ -93,7 +92,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/scannerRl"
                 app:boxStrokeWidth="@dimen/stroke"
-                app:startIconDrawable="@drawable/ic_lock"
+                android:gravity="center"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
                 <com.google.android.material.textfield.TextInputEditText

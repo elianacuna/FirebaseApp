@@ -11,7 +11,6 @@ import static com.eacunap.firebaseapp.R.string.message_email_7;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,7 +18,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
@@ -44,13 +42,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     //variables for the mail
     String verification = "";
-    int file_1 = message_email_1;
-    int file_2 = message_email_2;
-    int file_3 = message_email_3;
-    int file_4 = message_email_4;
-    int file_5 = message_email_5;
-    int file_6 = message_email_6;
-    int file_7 = message_email_7;
+    String file_1 = String.valueOf(message_email_1);
+
+    String file_2 = String.valueOf(message_email_1);
+    String file_3 = String.valueOf(message_email_1);
+    String file_4 = String.valueOf(message_email_1);
+    String file_5 = String.valueOf(message_email_1);
+    String file_6 = String.valueOf(message_email_1);
+    String file_7 = String.valueOf(message_email_1);
+
+    String file_8 = String.valueOf(message_email_1);
 
     //Binding
     private ActivityRegisterBinding binding;

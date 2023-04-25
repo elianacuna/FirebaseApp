@@ -24,7 +24,7 @@
     <string name="name" translatable="false">Name</string>
     <string name="title_2" translatable="false">What\'s your name</string>
     <string name="description_2" translatable="false">Enter your real name.</string>
-    <string name="chip_1" translatable="false">At least 6 characters</string>
+    <string name="chip_1" translatable="false">At least 8 characters</string>
     <string name="chip_2" translatable="false">Minimum 1  number</string>
     <string name="chip_3" translatable="false">Minimum 1 uppercase</string>
     <string name="chip_4" translatable="false">Minimum 1 symbol</string>
@@ -54,6 +54,17 @@
     \n\nThe <b>Privacy Policy</b> describes the ways we can use the information we collect when you create an account. For example, we use this information to provide, personalize and improve our products, including ads.</string>
 
     <!-- Confirm the email -->
+    <string name="title_code" translatable="false">Enter the confirmation code</string>
+    <string name="description_code" translatable="false">To confirm your account, enter the 6-digit code we sent to \t</string>
+    <string name="verification_code" translatable="false">Verification code</string>
+    <string name="receive_code" translatable="false">I did not receive the code</string>
+    <string name="new_email_title" translatable="false">Enter an email address</string>
+    <string name="description_new_description" translatable="false">Enter an email address where you can be contacted. We\'ll send you a code to confirm your account.</string>
+    //CodeEmailActivity
+    <string name="code_no_correct" translatable="false">The verification key is not correct, please verify and enter again</string>
+    <string name="enter_the_code" translatable="false">Enter the code</string>
+    <string name="empty_new_email" translatable="false">Enter the new email address</string>
+    <string name="email_successfully" translatable="false">Changed email address successfully</string>
 
 
 </resources>

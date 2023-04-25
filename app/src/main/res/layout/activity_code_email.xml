@@ -8,7 +8,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/code_rl">
 
         <ImageView
             android:layout_width="25dp"
@@ -22,8 +24,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter the confirmation code"
+            android:text="@string/title_code"
             android:textSize="@dimen/title"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginEnd="@dimen/end"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
             android:layout_below="@id/back"
@@ -39,16 +43,15 @@
             android:layout_marginTop="5dp"
             android:layout_marginStart="@dimen/star"
             android:layout_marginEnd="@dimen/end"
-            android:text="To confirm your account, enter the 6-digit code we sent to josepanama2@gmail.com."
             android:textSize="@dimen/description"
-            android:id="@+id/description"/>
+            android:id="@+id/email_txt"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/code_il"
             android:layout_width="@dimen/width_il"
             android:layout_height="@dimen/height"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/description"
+            android:layout_below="@+id/email_txt"
             android:layout_marginTop="@dimen/top_register"
             app:boxStrokeWidth="@dimen/stroke"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -57,9 +60,9 @@
                 android:id="@+id/code_et"
                 android:layout_width="@dimen/width_il"
                 android:layout_height="wrap_content"
-                android:text="Verification code"
+                android:hint="@string/verification_code"
                 android:maxLines="1"
-                android:inputType="textEmailAddress"/>
+                android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -83,7 +86,7 @@
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
             android:layout_marginBottom="10sp"
-            android:text="I did not receive the code"
+            android:text="@string/receive_code"
             android:textAllCaps="false"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_below="@id/code_mb"
@@ -94,6 +97,83 @@
             app:strokeWidth="1dp"
             app:strokeColor="@color/strike_color"
             android:id="@+id/not_code_mb"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/change_rl">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20sp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="20sp"
+            android:id="@+id/back_2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_email_title"
+            android:textSize="@dimen/title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_below="@id/back_2"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:id="@+id/title_2"/>
+
+        <TextView
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginEnd="@dimen/end"
+            android:text="@string/description_new_description"
+            android:textSize="@dimen/description"
+            android:id="@+id/description_2"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_email_il"
+            android:layout_width="@dimen/width_il"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/top_register"
+            android:layout_below="@+id/description_2"
+            app:boxStrokeWidth="@dimen/stroke"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_email_et"
+                android:layout_width="@dimen/width_il"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/new_email_mb"
+            android:layout_width="@dimen/width"
+            android:layout_height="@dimen/height"
+            android:layout_below="@+id/new_email_il"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginEnd="@dimen/end"
+            android:layout_marginTop="@dimen/top_register"
+            android:backgroundTint="@color/yellow_500"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp" />
 
 
     </RelativeLayout>
