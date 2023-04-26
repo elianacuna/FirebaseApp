@@ -48,6 +48,9 @@ dependencies {
     implementation files('libs/activation.jar')
     implementation files('libs/additionnal.jar')
 
+    //others library
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //Circle image
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

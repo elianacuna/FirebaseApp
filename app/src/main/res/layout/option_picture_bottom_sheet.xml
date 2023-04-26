@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <RelativeLayout
+         android:layout_width="@dimen/width"
+         android:layout_centerHorizontal="true"
+         android:layout_height="220dp">
+
+         <View
+             android:layout_width="50dp"
+             android:layout_height="3dp"
+             android:layout_centerHorizontal="true"
+             android:background="@color/view_color"
+             android:layout_marginEnd="10sp"
+             android:layout_marginTop="11dp"
+             android:id="@+id/view"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/add_picture"
+             android:textSize="@dimen/title_2"
+             android:layout_marginStart="@dimen/star"
+             android:layout_marginEnd="@dimen/end"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:layout_marginTop="@dimen/top_register"
+             android:id="@+id/title"/>
+
+         <ImageView
+             android:layout_width="25dp"
+             android:layout_height="25dp"
+             android:src="@drawable/ic_delete"
+             android:id="@+id/image"
+             android:layout_alignParentEnd="true"
+             android:layout_marginEnd="20dp"
+             android:layout_marginTop="@dimen/top_register"/>
+
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/title"
+             android:layout_marginStart="@dimen/top_register"
+             android:layout_marginTop="@dimen/top_register"
+             android:id="@+id/cameraRl">
+
+             <de.hdodenhof.circleimageview.CircleImageView
+                 android:id="@+id/cameraIv"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:src="@drawable/ic_camera"
+                 app:civ_border_width="1dp"
+                 app:civ_border_color="@color/view_color"
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Camera"
+                 android:layout_marginTop="5dp"
+                 android:layout_below="@+id/cameraIv"
+                 android:textSize="15dp"/>
+
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/title"
+             android:layout_marginStart="@dimen/top_register"
+             android:layout_toEndOf="@+id/cameraRl"
+             android:layout_marginTop="@dimen/top_register"
+             android:id="@+id/galleryRl">
+
+             <de.hdodenhof.circleimageview.CircleImageView
+                 android:id="@+id/galleryIv"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:src="@drawable/ic_gallery"
+                 app:civ_border_width="1dp"
+                 app:civ_border_color="@color/view_color"
+                 />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Gallery"
+                 android:layout_marginTop="5dp"
+                 android:layout_below="@+id/galleryIv"
+                 android:textSize="15dp"/>
+
+         </RelativeLayout>
+
+
+     </RelativeLayout>
+
+    </RelativeLayout>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

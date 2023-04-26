@@ -12,14 +12,6 @@
         android:visibility="visible"
         android:id="@+id/code_rl">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="20sp"
-            android:background="?android:selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_back"
-            android:layout_marginStart="20sp"
-            android:id="@+id/back"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +22,6 @@
             android:layout_marginEnd="@dimen/end"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
-            android:layout_below="@id/back"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/top_register"
             android:id="@+id/title"/>
@@ -107,15 +98,6 @@
         android:visibility="gone"
         android:id="@+id/change_rl">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="20sp"
-            android:background="?android:selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_back"
-            android:layout_marginStart="20sp"
-            android:id="@+id/back_2"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +105,6 @@
             android:textSize="@dimen/title"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
-            android:layout_below="@id/back_2"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:id="@+id/title_2"/>

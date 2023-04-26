@@ -11,6 +11,7 @@ import static com.eacunap.firebaseapp.R.string.message_email_7;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
@@ -42,16 +44,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     //variables for the mail
     String verification = "";
-    String file_1 = String.valueOf(message_email_1);
-
-    String file_2 = String.valueOf(message_email_1);
-    String file_3 = String.valueOf(message_email_1);
-    String file_4 = String.valueOf(message_email_1);
-    String file_5 = String.valueOf(message_email_1);
-    String file_6 = String.valueOf(message_email_1);
-    String file_7 = String.valueOf(message_email_1);
-
-    String file_8 = String.valueOf(message_email_1);
+    String  file_1 = "";
+    String  file_2 = "";
+    String  file_3 = "";
+    String  file_4 = "";
+    String  file_5 = "";
+    String  file_6 = "";
+    String  file_7 = "";
 
     //Binding
     private ActivityRegisterBinding binding;
@@ -436,6 +435,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void sendMail(){
 
+        file_1 = getApplicationContext().getString(message_email_1);
+        file_2 = getApplicationContext().getString(message_email_2);
+        file_3 = getApplicationContext().getString(message_email_3);
+        file_4 = getApplicationContext().getString(message_email_4);
+        file_5 = getApplicationContext().getString(message_email_5);
+        file_6 = getApplicationContext().getString(message_email_6);
+        file_7 = getApplicationContext().getString(message_email_7);
+
         email = binding.emailEt.getText().toString();
 
         verification = generateString(6);
@@ -471,7 +478,6 @@ public class RegisterActivity extends AppCompatActivity {
         javaMailAPI.execute();
     }
 
-
     private String generateString(int length){
         char[] chars = "0123456789".toCharArray();
         Random random = new Random();
@@ -482,4 +488,40 @@ public class RegisterActivity extends AppCompatActivity {
         }
         return sb.toString();
     }
+
+    private void dialogFinish() {
+
+        final AlertDialog dialog = new AlertDialog.Builder(RegisterActivity.this)
+                .setTitle("Do you want to stop creating \nyour account")
+                .setMessage("If you stop now, you'll lose any \nprogress you've made.")
+                .setPositiveButton("Continue creating account", null)
+                .setNegativeButton("Stop creating account", null)
+                .show();
+
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        Button negativeButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+
+        positiveButton.setTextColor(Color.GRAY);
+        positiveButton.setTextSize(12);
+        positiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        negativeButton.setTextColor(Color.BLUE);
+        negativeButton.setTextSize(12);
+        negativeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+                dialog.dismiss();
+
+            }
+        });
+
+    }
+
 }

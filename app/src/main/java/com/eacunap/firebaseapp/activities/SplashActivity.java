@@ -74,9 +74,9 @@ public class SplashActivity extends AppCompatActivity {
                                 startActivity(new Intent(SplashActivity.this, CodeEmailActivity.class));
                                 finish();
                             }
-                            else if (userType.equals("confirmed")){
+                            else if (userType.equals("auth_confirmed")){
                                 //open HomeActivity
-                                startActivity(new Intent(SplashActivity.this, CodeEmailActivity.class));
+                                startActivity(new Intent(SplashActivity.this, CompleteInfoUserActivity.class));
                                 finish();
                             }
                         }

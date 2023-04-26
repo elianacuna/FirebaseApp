@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- UI Design -->
-    <color name="background_view">#FFFFFF</color>
+    <color name="background_view">#F5F5F5</color>
     <color name="view_color">#CFCFCF</color>
     <color name="strike_color">#CFCFCF</color>
     <color name="error">#F60000</color>

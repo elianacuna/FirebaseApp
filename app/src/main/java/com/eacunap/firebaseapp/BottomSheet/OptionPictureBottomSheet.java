@@ -9,39 +9,28 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.eacunap.firebaseapp.R;
 import com.eacunap.firebaseapp.activities.CodeEmailActivity;
 import com.eacunap.firebaseapp.databinding.CodeSheetBottomBinding;
+import com.eacunap.firebaseapp.databinding.OptionPictureBottomSheetBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.button.MaterialButton;
 
-import java.util.Random;
+public class OptionPictureBottomSheet extends BottomSheetDialogFragment {
 
-public class CodeBottomSheet extends BottomSheetDialogFragment {
-
-    public static CodeBottomSheet newInstance() {
-        CodeBottomSheet bottomSheetOption = new CodeBottomSheet();
+    public static OptionPictureBottomSheet newInstance() {
+        OptionPictureBottomSheet bottomSheetOption = new OptionPictureBottomSheet();
         return bottomSheetOption;
     }
 
     //Binding
-    CodeSheetBottomBinding binding;
+    OptionPictureBottomSheetBinding binding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = CodeSheetBottomBinding.inflate(inflater, container, false);
+        binding = OptionPictureBottomSheetBinding.inflate(inflater, container, false);
 
         //Handle click to resend code.
-        binding.resendMb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resendCode();
-            }
-        });
-
-        //handle back click, star change email screen
-        binding.changeMb.setOnClickListener(new View.OnClickListener() {
+        binding.galleryRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeEmail();
@@ -49,7 +38,7 @@ public class CodeBottomSheet extends BottomSheetDialogFragment {
         });
 
         //handle click log out, start Verification code screen
-        binding.logOutMb.setOnClickListener(new View.OnClickListener() {
+        binding.cameraRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logOut();
@@ -59,20 +48,15 @@ public class CodeBottomSheet extends BottomSheetDialogFragment {
         return binding.getRoot();
     }
 
-    private void resendCode() {
-
-        ((CodeEmailActivity)getActivity()).resendCode();
-    }
-
     private void logOut() {
 
-        ((CodeEmailActivity)getActivity()).logOut();
+        Toast.makeText(getContext(), "aa", Toast.LENGTH_SHORT).show();
 
     }
 
     private void changeEmail() {
 
-        ((CodeEmailActivity)getActivity()).emailChange();
+        Toast.makeText(getContext(), "bbaa", Toast.LENGTH_SHORT).show();
 
     }
 

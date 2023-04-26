@@ -15,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
@@ -47,13 +49,16 @@ public class CodeEmailActivity extends AppCompatActivity {
 
     //variables for the mail
     String verification = "";
-    int file_1 = message_email_1;
-    int file_2 = message_email_2;
-    int file_3 = message_email_3;
-    int file_4 = message_email_4;
-    int file_5 = message_email_5;
-    int file_6 = message_email_6;
-    int file_7 = message_email_7;
+    String  file_1 = "";
+    String  file_2 = "";
+    String  file_3 = "";
+    String  file_4 = "";
+    String  file_5 = "";
+    String  file_6 = "";
+    String  file_7 = "";
+    String email = "", name = "", newEmail = "";
+
+    Context context;
 
     //binding
     private ActivityCodeEmailBinding binding;
@@ -65,11 +70,16 @@ public class CodeEmailActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
+    //IA
+    String IA = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCodeEmailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        context = getApplicationContext();
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance();
@@ -102,7 +112,8 @@ public class CodeEmailActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         //get all info of user here from snapshot
-                        String email = ""+snapshot.child("auth").getValue();
+                        email = ""+snapshot.child("auth").getValue();
+                        name = ""+snapshot.child("name").getValue();
 
                         //set data to ui
                         binding.emailTxt.setText(getApplicationContext().getString(R.string.description_code) + email);
@@ -147,7 +158,7 @@ public class CodeEmailActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Void unused) {
 
-                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), CompleteInfoUserActivity.class));
                                         finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
@@ -185,33 +196,43 @@ public class CodeEmailActivity extends AppCompatActivity {
         binding.codeRl.setVisibility(View.GONE);
         binding.changeRl.setVisibility(View.VISIBLE);
         codeBottomSheet.dismiss();
+
+        IA = "change";
+
     }
+
     private void changeEmail() {
         binding.newEmailMb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //get all info of user here from snapshot
-                DatabaseReference changeEmailReference = FirebaseDatabase.getInstance().getReference("Users");
-                changeEmailReference.child(firebaseAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String email = ""+snapshot.child("auth").getValue();
-                        String password = ""+snapshot.child("password").getValue();
+                newEmail = binding.newEmailEt.getText().toString();
 
-                        //Get auth credentials from the user for re-authentication
-                        AuthCredential credential = EmailAuthProvider.getCredential(email, password);
-                        firebaseUser.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                //Now change your email address
-                                String emailNew = binding.newEmailEt.getText().toString().trim();
+                //check if the EditTextNewEmail is not empty
+                if (!Patterns.EMAIL_ADDRESS.matcher(newEmail).matches()){
 
-                                //check if the EditTextNewEmail is not empty
-                                if (!emailNew.isEmpty()){
+                    binding.description2.setTextColor(getResources().getColor(R.color.error));
+                    binding.description2.setText(R.string.error_email);
+
+                } else {
+                    //get all info of user here from snapshot
+                    DatabaseReference changeEmailReference = FirebaseDatabase.getInstance().getReference("Users");
+                    changeEmailReference.child(firebaseAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            String email = ""+snapshot.child("auth").getValue();
+                            String password = ""+snapshot.child("password").getValue();
+
+                            //Get auth credentials from the user for re-authentication
+                            AuthCredential credential = EmailAuthProvider.getCredential(email, password);
+                            firebaseUser.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task){
+                                    //Now change your email address
+                                    newEmail = binding.newEmailEt.getText().toString().trim();
 
                                     //if the field is not empty, update the email address
-                                    firebaseUser.updateEmail(emailNew).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    firebaseUser.updateEmail(newEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             //Update new email address
@@ -221,12 +242,12 @@ public class CodeEmailActivity extends AppCompatActivity {
 
                                                 codeResendChangeEmail();
 
-                                                String emailDb = "";
-                                                emailDb = binding.newEmailEt.getText().toString();
+
+                                                newEmail = binding.newEmailEt.getText().toString();
 
                                                 //set data to DB
                                                 HashMap<String, Object> hashMap = new HashMap<>();
-                                                hashMap.put("auth", emailDb);
+                                                hashMap.put("auth", newEmail);
 
                                                 //setup data to add in db
                                                 DatabaseReference updateNewEmailReference = FirebaseDatabase.getInstance().getReference("Users");
@@ -256,28 +277,26 @@ public class CodeEmailActivity extends AppCompatActivity {
                                         }
                                     });
 
-                                } else {
-                                    //if the field is empty send the following message
-                                    Toast.makeText(CodeEmailActivity.this, R.string.empty_new_email, Toast.LENGTH_SHORT).show();
                                 }
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                //In case the re-authentication fails
-                                Toast.makeText(CodeEmailActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    //In case the re-authentication fails
+                                    Toast.makeText(CodeEmailActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                    }
+                        }
+                    });
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                }
 
-                    }
-                });
             }
         });
+
     }
 
     //handle click log out, start Verification code screen
@@ -291,6 +310,90 @@ public class CodeEmailActivity extends AppCompatActivity {
 
     //Send code to email address
     private void codeResendChangeEmail() {
+        file_1 = getApplicationContext().getString(message_email_1);
+        file_2 = getApplicationContext().getString(message_email_2);
+        file_3 = getApplicationContext().getString(message_email_3);
+        file_4 = getApplicationContext().getString(message_email_4);
+        file_5 = getApplicationContext().getString(message_email_5);
+        file_6 = getApplicationContext().getString(message_email_6);
+        file_7 = getApplicationContext().getString(message_email_7);
+
+
+        String newEmail = binding.newEmailEt.getText().toString();
+
+        verification = generateString(6);
+
+
+        //setup data to add in db
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("code_verification", verification);
+
+        DatabaseReference  IAReference = FirebaseDatabase.getInstance().getReference("IAUser");
+        IAReference.child(firebaseAuth.getUid()).updateChildren(hashMap)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+
+
+        String sendMessage = file_1+name+"!"+"\n"+file_2+file_3+verification+"\n"+file_4+file_5+file_6+file_7;
+        String sendSubject = "[Quiker] Please verify your device";
+
+        //Send Mail
+        JavaMailAPI javaMailAPI = new JavaMailAPI(this,newEmail,sendSubject,sendMessage);
+        Snackbar.make(binding.codeRl, R.string.send_email, Snackbar.LENGTH_LONG)
+                .show();
+
+        javaMailAPI.execute();
+    }
+
+    public void resendCode() {
+        file_1 = getApplicationContext().getString(message_email_1);
+        file_2 = getApplicationContext().getString(message_email_2);
+        file_3 = getApplicationContext().getString(message_email_3);
+        file_4 = getApplicationContext().getString(message_email_4);
+        file_5 = getApplicationContext().getString(message_email_5);
+        file_6 = getApplicationContext().getString(message_email_6);
+        file_7 = getApplicationContext().getString(message_email_7);
+
+
+        verification = generateString(6);
+
+
+        //setup data to add in db
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("code_verification", verification);
+
+        DatabaseReference  IAReference = FirebaseDatabase.getInstance().getReference("IAUser");
+        IAReference.child(firebaseAuth.getUid()).updateChildren(hashMap)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+
+
+        String sendMessage = file_1+name+"!"+"\n"+file_2+file_3+verification+"\n"+file_4+file_5+file_6+file_7;
+        String sendSubject = "[Quiker] Please verify your device";
+
+        //Send Mail
+        JavaMailAPI javaMailAPI = new JavaMailAPI(this,email,sendSubject,sendMessage);
+        Snackbar.make(binding.codeRl, R.string.send_email, Snackbar.LENGTH_LONG)
+                .show();
+
+        javaMailAPI.execute();
+        codeBottomSheet.dismiss();
     }
 
     private String generateString(int length){
@@ -304,4 +407,21 @@ public class CodeEmailActivity extends AppCompatActivity {
         return sb.toString();
     }
 
+    @Override
+    public void onBackPressed() {
+        if (IA != null && IA.equalsIgnoreCase("change")){
+            binding.changeRl.setVisibility(View.GONE);
+            binding.codeRl.setVisibility(View.VISIBLE);
+
+            IA = "code";
+
+        } else if (IA != null && IA.equalsIgnoreCase("code")){
+
+            finish();
+
+        } else {
+
+            finish();
+        }
+    }
 }

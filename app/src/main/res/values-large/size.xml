@@ -11,6 +11,7 @@
     <dimen name="stroke">2dp</dimen>
     <dimen name="backIv">25dp</dimen>
     <dimen name="width_il">360dp</dimen>
+    <dimen name="title_2">22dp</dimen>
 
     <!-- Login -->
     <dimen name="image_Widht_height">55dp</dimen>

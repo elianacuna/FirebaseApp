@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CompleteInfoUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_complete"
+            android:textSize="@dimen/title_2"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginEnd="@dimen/end"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/top_register"
+            android:id="@+id/title"/>
+
+        <TextView
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:text="@string/description_complete"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="@dimen/star"
+            android:layout_marginEnd="@dimen/end"
+            android:textSize="@dimen/description"
+            android:id="@+id/description"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_Iv"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/ic_person"
+            app:civ_border_color="@color/background_view"
+            app:civ_border_width="5dp"
+            android:layout_below="@id/description"
+            android:layout_marginTop="@dimen/top_register"
+            android:layout_centerHorizontal="true"
+            app:civ_border_overlay="true"
+            app:civ_circle_background_color="#DBE4ED"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="23dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/add_picture_mb"
+                android:layout_marginBottom="20dp"
+                android:background="@color/view_color" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_picture_mb"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_above="@+id/skip_mb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/yellow_500"
+                android:text="@string/add_picture"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/skip_mb"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="@dimen/width"
+                android:layout_height="@dimen/height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/star"
+                android:layout_marginEnd="@dimen/end"
+                android:text="@string/skip"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:cornerRadius="10sp"
+                app:strokeColor="@color/strike_color"
+                app:strokeWidth="1dp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

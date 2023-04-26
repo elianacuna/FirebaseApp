@@ -13,6 +13,8 @@
     <string name="password" translatable="false">Password</string>
     <string name="forgot_password" translatable="false">Forgot password?</string>
     <string name="description_login" translatable="false">We are happy to see you again. Sign in with your Firebase ID</string>
+    //LoginActivity
+    <string name="enter_password" translatable="false">Enter password...!</string>
 
 
     <!-- Register -->
@@ -47,7 +49,7 @@
     <string name="years_old" translatable="false"> Years old</string>
     <string name="year_old" translatable="false"> Year old</string>
     <string name="choose_your_date_of_birth">Choose your date of birth.</string>
-   <string name="send_email" translatable="false">The code was sent</string>
+    <string name="send_email" translatable="false">The code was sent</string>
 
     <!-- Terms and Policies -->
     <string name="info_terms_and_policies" translatable="false">By tapping <b>I agree</b>, you agree to create an account and to Firebase\'s <b>Terms</b>, <b>Privacy Policy</b> and <b>Cookies Policy</b>.
@@ -65,6 +67,14 @@
     <string name="enter_the_code" translatable="false">Enter the code</string>
     <string name="empty_new_email" translatable="false">Enter the new email address</string>
     <string name="email_successfully" translatable="false">Changed email address successfully</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="take_photo">Take photo</string>
+    <string name="add_picture">Add picture</string>
+    <string name="title_complete">Add a profile picture</string>
+    <string name="description_complete">Add profile picture so your friends know it\'s your. Evereyone will be able to see your picture</string>
+    <string name="skip">Skip</string>
+
+    <!-- Complete info user -->
 
 
 </resources>
