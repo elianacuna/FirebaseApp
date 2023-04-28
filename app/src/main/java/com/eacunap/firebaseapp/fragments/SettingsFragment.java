@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.eacunap.firebaseapp.R;
 import com.eacunap.firebaseapp.activities.CompleteInfoUserActivity;
+import com.eacunap.firebaseapp.activities.EditProfileActivity;
 import com.eacunap.firebaseapp.databinding.FragmentSettingsBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -43,6 +44,14 @@ public class SettingsFragment extends Fragment {
 
         //load info user
         loadInfoUser();
+
+        //handle loginBtn click, star edit profile screen
+        binding.editMb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), EditProfileActivity.class));
+            }
+        });
 
         return binding.getRoot();
     }

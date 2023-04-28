@@ -18,7 +18,8 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/info_rl">
+                android:id="@+id/info_rl"
+                android:visibility="visible">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="40dp"
@@ -26,7 +27,6 @@
                     android:src="@drawable/ic_qr"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
-                    app:civ_circle_background_color="#F4F4F4"
                     android:id="@+id/qr_ci"/>
 
                 <com.google.android.material.button.MaterialButton
@@ -96,6 +96,7 @@
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
+                            android:layout_marginStart="15dp"
                             android:src="@drawable/ic_gallery"
                             android:layout_centerVertical="true"
                             android:id="@+id/photo_iv"/>
@@ -114,7 +115,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_below="@+id/photo_rl"
-                        android:layout_marginStart="40dp"
+                        android:layout_marginStart="60dp"
                         android:background="@color/view_color" />
 
                     <RelativeLayout
@@ -123,8 +124,9 @@
                         android:layout_below="@+id/photo_rl"
                         android:id="@+id/username_rl">
                         <ImageView
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="15dp"
                             android:src="@drawable/ic_camera"
                             android:layout_centerVertical="true"
                             android:id="@+id/username_iv"/>
@@ -164,7 +166,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#3450EF"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -201,7 +203,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#35C42C"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -238,7 +240,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="@color/yellow_700"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -287,7 +289,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#FF3131"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -324,7 +326,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#9C9C9C"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -361,7 +363,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#8E59ED"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -398,7 +400,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#35C42C"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -435,7 +437,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#14A2DA"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -483,7 +485,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#FFCA28"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
@@ -520,7 +522,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginStart="20dp"
+                            android:layout_marginStart="15dp"
                             android:backgroundTint="#FF3131"
                             android:layout_centerVertical="true"
                             app:cardCornerRadius="6dp"
