@@ -342,8 +342,9 @@ public class RegisterActivity extends AppCompatActivity {
         hashMap.put("auth", email);
         hashMap.put("name", name);
         hashMap.put("password", password);
-        hashMap.put("birthday", "a");
+        hashMap.put("birthday", "");
         hashMap.put("profileImage", "");
+        hashMap.put("username", "");
         hashMap.put("cover", "");
 
         //set data to database

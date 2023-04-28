@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.eacunap.firebaseapp.activities.CodeEmailActivity;
+import com.eacunap.firebaseapp.activities.CompleteInfoUserActivity;
 import com.eacunap.firebaseapp.databinding.CodeSheetBottomBinding;
 import com.eacunap.firebaseapp.databinding.OptionPictureBottomSheetBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -33,7 +34,7 @@ public class OptionPictureBottomSheet extends BottomSheetDialogFragment {
         binding.galleryRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeEmail();
+                gallery();
             }
         });
 
@@ -41,22 +42,22 @@ public class OptionPictureBottomSheet extends BottomSheetDialogFragment {
         binding.cameraRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logOut();
+                camera();
             }
         });
 
         return binding.getRoot();
     }
 
-    private void logOut() {
+    private void gallery() {
 
-        Toast.makeText(getContext(), "aa", Toast.LENGTH_SHORT).show();
+        ((CompleteInfoUserActivity)getActivity()).selectPhotoGallery();
 
     }
 
-    private void changeEmail() {
+    private void camera() {
 
-        Toast.makeText(getContext(), "bbaa", Toast.LENGTH_SHORT).show();
+        ((CompleteInfoUserActivity)getActivity()).takePhoto();
 
     }
 

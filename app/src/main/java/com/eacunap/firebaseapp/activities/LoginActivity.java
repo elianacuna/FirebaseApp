@@ -113,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 } else if (confirmAuth.equals("auth_confirmed")){
                     //if your email is confirmed, open Home screen
-                    startActivity(new Intent(getApplicationContext(), CompleteInfoUserActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     finish();
                 }
             }

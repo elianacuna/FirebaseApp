@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_person"
+            android:layout_centerVertical="true"
+            android:id="@+id/profile_iv"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp"
+            android:layout_gravity="center"
+            app:civ_circle_background_color="#DBE4ED"
+            app:civ_border_color="@color/background_view"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_rl"
+            android:layout_toEndOf="@+id/profile_iv"
+            android:layout_toStartOf="@+id/follow_mb"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            >
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/username_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_below="@+id/name_tv"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Follow"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/yellow_700"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/follow_mb"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="#edf1f7"
+            android:textColor="#6d6f72"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/cancel_mb"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

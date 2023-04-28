@@ -67,14 +67,27 @@
     <string name="enter_the_code" translatable="false">Enter the code</string>
     <string name="empty_new_email" translatable="false">Enter the new email address</string>
     <string name="email_successfully" translatable="false">Changed email address successfully</string>
-    <string name="choose_from_gallery">Choose from Gallery</string>
-    <string name="take_photo">Take photo</string>
-    <string name="add_picture">Add picture</string>
-    <string name="title_complete">Add a profile picture</string>
-    <string name="description_complete">Add profile picture so your friends know it\'s your. Evereyone will be able to see your picture</string>
-    <string name="skip">Skip</string>
+
 
     <!-- Complete info user -->
+    <string name="choose_from_gallery" translatable="false">Choose from Gallery</string>
+    <string name="take_photo" translatable="false">Take photo</string>
+    <string name="add_picture" translatable="false">Add picture</string>
+    <string name="title_complete" translatable="false">Add a profile picture</string>
+    <string name="description_complete" translatable="false">Add profile picture so your friends know it\'s your. Evereyone will be able to see your picture</string>
+    <string name="skip" translatable="false">Skip</string>
+    <string name="done" translatable="false">Done</string>
+    <string name="change_picture" translatable="false">Change picture</string>
+    <string name="title_username">Why a username?</string>
+    <string name="description_username">So that your friends, family or acquaintances can find you faster. Your username is unique, only you will use it.</string>
+    <string name="username">Username</string>
+    <string name="welcome_1" translatable="false">Welcome to FirebaseApp,</string>
+    <string name="welcome_2" translatable="false">Let\'s start customizing your experience</string>
+    //CompleteInfoUserActivity
+    <string name="permission_denied" translatable="false">Permission Denied</string>
+    <string name="cancelled" translatable="false">Cancelled</string>
+    <string name="error_username" translatable="false">Enter your username</string>
+
 
 
 </resources>
