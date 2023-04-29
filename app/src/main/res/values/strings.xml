@@ -88,5 +88,19 @@
     <string name="cancelled" translatable="false">Cancelled</string>
     <string name="error_username" translatable="false">Enter your username</string>
 
+    <!-- Settings -->
+    <string name="edit_profile" translatable="false">Edit Profile</string>
+    <string name="see_your_profile" translatable="false">See your profile</string>
+    <string name="saved" translatable="false">Saved</string>
+    <string name="recent_calls" translatable="false">Recent calls</string>
+    <string name="devices" translatable="false">Devices</string>
+    <string name="notifications" translatable="false">Notifications</string>
+    <string name="privacy_and_security" translatable="false">Privacy and Security</string>
+    <string name="data_and_storage" translatable="false">Data and Storage</string>
+    <string name="language" translatable="false">Language</string>
+    <string name="night_mode" translatable="false">Night Mode</string>
+    <string name="firebaseapp_tips">FirebaseApp Tips</string>
+    <string name="invite_friends">Invite friends</string>
+
 
 </resources>

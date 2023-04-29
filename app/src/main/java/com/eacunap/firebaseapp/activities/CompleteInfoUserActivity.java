@@ -353,6 +353,7 @@ public class CompleteInfoUserActivity extends AppCompatActivity {
 
                         //set data to ui
                         binding.description1.setText(getApplicationContext().getString(R.string.welcome_1) + "\t\t" + name);
+
                         try {
                             Glide.with(getApplicationContext())
                                     .load(imageProfile)

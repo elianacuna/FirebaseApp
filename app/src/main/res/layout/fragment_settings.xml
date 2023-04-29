@@ -16,10 +16,11 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/info_rl"
                 android:visibility="visible">
+
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="40dp"
@@ -29,20 +30,8 @@
                     android:layout_marginTop="20dp"
                     android:id="@+id/qr_ci"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/edit_mb"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/end"
-                    android:layout_marginTop="15dp"
-                    android:text="Edit"
-                    android:textColor="@color/yellow_500"
-                    android:textAllCaps="false"
-                    android:textSize="@dimen/text" />
-
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:visibility="visible"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
@@ -52,6 +41,7 @@
                     android:id="@+id/profile_ci"/>
 
                 <TextView
+                    android:visibility="visible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -64,6 +54,7 @@
                     android:id="@+id/name_tv"/>
 
                 <TextView
+                    android:visibility="visible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/name_tv"
@@ -92,49 +83,50 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/photo_rl">
+                        android:id="@+id/edit_rl">
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_marginStart="15dp"
-                            android:src="@drawable/ic_gallery"
+                            android:src="@drawable/ic_edit"
                             android:layout_centerVertical="true"
                             android:id="@+id/photo_iv"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Set Profile Photo"
+                            android:text="@string/edit_profile"
                             android:textSize="@dimen/description"
                             android:textColor="@color/yellow_500"
                             android:layout_toEndOf="@id/photo_iv"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:id="@+id/text"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:layout_below="@+id/photo_rl"
-                        android:layout_marginStart="60dp"
+                        android:layout_below="@+id/edit_rl"
+                        android:layout_marginStart="52dp"
                         android:background="@color/view_color" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/photo_rl"
+                        android:layout_below="@+id/edit_rl"
                         android:id="@+id/username_rl">
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_marginStart="15dp"
-                            android:src="@drawable/ic_camera"
+                            android:src="@drawable/profile_ic"
                             android:layout_centerVertical="true"
                             android:id="@+id/username_iv"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Set Profile Photo"
+                            android:text="@string/see_your_profile"
                             android:textSize="@dimen/description"
                             android:textColor="@color/yellow_500"
                             android:layout_toEndOf="@id/username_iv"
@@ -181,7 +173,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Saved"
+                            android:text="@string/saved"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -218,7 +210,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Recent calls"
+                            android:text="@string/recent_calls"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -255,7 +247,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Devices"
+                            android:text="@string/devices"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -304,7 +296,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Notifications"
+                            android:text="@string/notifications"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -341,7 +333,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Privacy and Security"
+                            android:text="@string/privacy_and_security"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -378,7 +370,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Data and Storage"
+                            android:text="@string/data_and_storage"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -415,7 +407,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Language"
+                            android:text="@string/language"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -452,7 +444,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Night Mode"
+                            android:text="@string/night_mode"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -500,7 +492,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FirebaseApp Tips"
+                            android:text="@string/firebaseapp_tips"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"
@@ -537,7 +529,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Invite friends"
+                            android:text="@string/invite_friends"
                             android:textSize="@dimen/description"
                             android:layout_marginStart="15dp"
                             android:textColor="@color/black"

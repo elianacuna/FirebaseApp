@@ -6,4 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_add"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="-20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:layout_toStartOf="@id/search_iv"
+            android:layout_marginTop="20dp"
+            android:id="@+id/add_iv"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="20dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:id="@+id/search_iv"/>
+
+    </RelativeLayout>
+
 </FrameLayout>

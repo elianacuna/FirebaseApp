@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- UI Design -->
-    <color name="background_view">#F5F5F5</color>
+    <color name="background_view">#F6F6FA</color>
     <color name="view_color">#CFCFCF</color>
     <color name="strike_color">#CFCFCF</color>
     <color name="error">#F60000</color>
@@ -19,6 +19,9 @@
     <color name="color_text_chip">#5FB89E</color>
     <color name="error_chip_color">#E6E6E6</color>
     <color name="error_chip_text_color">#9A9BA2</color>
+
+    <!-- Color icons -->
+    <color name="icons_color">#d9d9d9</color>
 
     //Color bottom sheet and dialog
     <color name="color_sheet_dialog">#FFFFFF</color>

@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
@@ -22,19 +23,9 @@
             android:foregroundGravity="top"
             />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/menu_rl">
-
-        </RelativeLayout>
-
-
-
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_below="@+id/menu_rl"
             android:layout_above="@+id/tab_layout"
             android:layout_height="match_parent"/>
 

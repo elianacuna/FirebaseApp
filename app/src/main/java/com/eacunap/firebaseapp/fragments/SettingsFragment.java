@@ -46,10 +46,17 @@ public class SettingsFragment extends Fragment {
         loadInfoUser();
 
         //handle loginBtn click, star edit profile screen
-        binding.editMb.setOnClickListener(new View.OnClickListener() {
+        binding.editRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), EditProfileActivity.class));
+            }
+        });
+
+        binding.usernameRl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "aaa", Toast.LENGTH_SHORT).show();
             }
         });
 
